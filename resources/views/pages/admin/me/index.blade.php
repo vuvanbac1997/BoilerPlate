@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="email" class="col-sm-2 control-label">EMail Address</label>
+                    <label for="email" class="col-sm-2 control-label">Email Address</label>
 
                     <div class="col-sm-10">
                         <input type="email" name="email" class="form-control" id="email" placeholder="Email"
@@ -54,9 +54,11 @@
                                placeholder="Password" value="">
                     </div>
                 </div>
-            </div>
-            <div class="box-footer">
-                <button type="submit" class="btn btn-info pull-right">Save</button>
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary float-left">Save</button>
+                    </div>
+                </div>
             </div>
         </div>
     </form>

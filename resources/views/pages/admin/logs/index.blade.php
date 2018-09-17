@@ -56,7 +56,7 @@
         </div>
 
         <div class="box-body" style=" overflow-x: scroll; ">
-            <table class="table table-bordered logs-system">
+            <table class="table table-responsive table-bordered logs-system">
                 <tr>
                     <th style="width: 10px">{!! \PaginationHelper::sort('id', 'ID') !!}</th>
                     <th style="width: 10px">{!! \PaginationHelper::sort('user_name', trans('admin.pages.logs.columns.user_name')) !!}</th>

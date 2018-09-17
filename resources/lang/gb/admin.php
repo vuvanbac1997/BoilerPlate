@@ -11,6 +11,8 @@ return [
         'log_system'               => 'Logs System',
         'images'                   => 'Images',
         'articles'                 => 'Articles',
+        'admin.menu.tests'=>'test',
+        'tests'     =>  'Tests'
     ],
     'breadcrumb' => [
         'dashboard'                => 'Dashboard',
@@ -213,43 +215,11 @@ return [
         ],
         'tests'   => [
             'columns'  => [
-            ],
-        ],
-        'tests'   => [
-            'columns'  => [
-                'name' => 'Name',
-            ],
-        ],
-        'tests'   => [
-            'columns'  => [
                 'title' => 'Title',
                 'content' => 'Content',
             ],
         ],
-        'tests'   => [
-            'columns'  => [
-                'title' => 'Title',
-                'content' => 'Content',
-            ],
-        ],
-        'tests'   => [
-            'columns'  => [
-                'title' => 'Title',
-                'content' => 'Content',
-            ],
-        ],
-        'tests'   => [
-            'columns'  => [
-                'title' => 'Title',
-                'content' => 'Content',
-            ],
-        ],
-        'tests'   => [
-            'columns'  => [
-                'title' => 'Title',
-                'content' => 'Content',
-            ],
-        ],
+
         /* NEW PAGE STRINGS */
     ],
     'roles'      => [

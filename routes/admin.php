@@ -48,6 +48,8 @@
 
         \Route::resource('tests', 'Admin\TestController');
         \Route::resource('tests', 'Admin\TestController');
+        \Route::resource('tests', 'Admin\TestController');
+        \Route::resource('tests', 'Admin\TestController');
         /* NEW ADMIN RESOURCE ROUTE */
 
     });

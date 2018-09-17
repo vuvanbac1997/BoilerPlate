@@ -45,7 +45,6 @@
     @endif
 
             <li class="nav-item" @if( $menu=='tests') class="active" @endif ><a class="nav-link" href="{!! \URL::action('Admin\TestController@index') !!}"><i class="fa fa-users"></i> <span> @lang('admin.menu.tests') </span></a></li>
-            <li class="nav-item" @if( $menu=='tests') class="active" @endif ><a class="nav-link" href="{!! \URL::action('Admin\TestController@index') !!}"><i class="fa fa-users"></i> <span> @lang('admin.menu.tests') </span></a></li>
             <!-- %%SIDEMENU%% -->
     <!-- /.sidebar -->
 </ul>

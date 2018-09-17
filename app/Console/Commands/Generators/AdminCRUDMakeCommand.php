@@ -368,7 +368,11 @@ class AdminCRUDMakeCommand extends GeneratorCommandBase
         $directoryName = \StringHelper::camel2Spinal( \StringHelper::pluralize( $name ) );
 
         $languages = $this->files->get( $this->getLanguageFilePath() );
+        $languages1 = $this->files->get( $this->getLanguageFilePath() );
         $key = '/* NEW PAGE STRINGS */';
+
+        $key1 ='/* NEW MENU STRINGS */'; //Generate menu item
+        $data1 =  "'".$directoryName."'     =>  '". ucwords($directoryName)."'";
 
         $columns = $this->getColumns($name);
         $data = "'".$directoryName."'   => [".PHP_EOL."            'columns'  => [".PHP_EOL;
@@ -378,8 +382,10 @@ class AdminCRUDMakeCommand extends GeneratorCommandBase
         $data .= '            ],'.PHP_EOL.'        ],'.PHP_EOL.'        '.$key;
 
         $languages = str_replace( $key, $data, $languages );
-        $this->files->put( $this->getLanguageFilePath(), $languages );
+        $languages1 = str_replace( $key1, $data1, $languages1);
 
+        $this->files->put( $this->getLanguageFilePath(), $languages );
+        $this->files->put( $this->getLanguageFilePath(), $languages1 );
         return true;
     }
 
@@ -465,11 +471,11 @@ class AdminCRUDMakeCommand extends GeneratorCommandBase
                         .PHP_EOL.'                            <div class="form-group">'
                         .PHP_EOL.'                                <label for="%%column%%">@lang(\'admin.pages.%%classes-spinal%%.columns.%%column%%\')</label>'
                         .PHP_EOL.'                                <div class="input-group date datetime-field">'
-                        .PHP_EOL.'                                    <input type="text" class="form-control" name="%%column%%" required'
+                        .PHP_EOL.'                                    <input id="datetimepicker" type="text" class="form-control" name="%%column%%" required'
                         .PHP_EOL.'                                         value="{{ old(\'%%column%%\') ? old(\'%%column%%\') : $%%class%%->%%column%% }}">'
-                        .PHP_EOL.'                                    <span class="input-group-addon">'
-                        .PHP_EOL.'                                        <span class="glyphicon glyphicon-calendar"></span>'
-                        .PHP_EOL.'                                    </span>'
+                        .PHP_EOL.'                                    <div class="input-group-append">'
+                        .PHP_EOL.'                                        <span class="input-group-text fa fa-calendar"></span>'
+                        .PHP_EOL.'                                    </div>'
                         .PHP_EOL.'                                </div>'
                         .PHP_EOL.'                            </div>'
                         .PHP_EOL.'                        </div>'
